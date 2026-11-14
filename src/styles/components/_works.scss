@@ -61,6 +61,8 @@ $filter-categories: ('branding', 'identity', 'print', 'web', 'motion');
   white-space: nowrap;
   cursor: pointer;
 
+  user-select: none;
+
   &:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);

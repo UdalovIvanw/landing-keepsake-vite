@@ -52,3 +52,7 @@ ul {
 .visually-hidden {
   @include visually-hidden;
 }
+
+html {
+  text-size-adjust: 100%;
+}
