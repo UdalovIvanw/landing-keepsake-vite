@@ -39,6 +39,8 @@ flowchart LR
 
 ```text
 landing-keepsake-vite/
+├── .github/workflows/
+│   └── deploy.yml
 ├── .husky/
 │   └── pre-commit             # Git-hook
 ├── scripts/
