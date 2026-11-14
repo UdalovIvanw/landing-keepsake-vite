@@ -12,7 +12,7 @@ $colors: (
   'card-bg': #4c4c57,
   'footer': #2a2a2d,
   'overlay': rgb(30 32 36 / 82%),
-  'white': #ffffff,
+  'white': #fff,
   'logo': #b9bec3,
   'dot': #cfd5d9,
   'footer-muted': #8e9297,
@@ -27,12 +27,23 @@ $colors: (
   'social-dr': #ee7cb0,
   'social-p': #e84849,
 );
-
 $fonts: (
-  'oswald': ('Oswald', sans-serif),
-  'open-sans': ('Open Sans', sans-serif),
-  'dancing-script': ('Dancing Script', cursive),
-  'lora': ('Lora', Georgia, serif),
+  'oswald': (
+    'Oswald',
+    sans-serif,
+  ),
+  'open-sans': (
+    'Open Sans',
+    sans-serif,
+  ),
+  'dancing-script': (
+    'Dancing Script',
+    cursive,
+  ),
+  'lora': (
+    'Lora',
+    georgia,
+    serif,
+  ),
 );
-
 $container-max-width: 1100px;

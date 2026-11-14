@@ -10,13 +10,13 @@ footer#contact.footer
         form.newsletter__form(action='#newsletter-success', method='get')
           .newsletter__group
             input#newsletter-email.newsletter__input(
-              type='email'
-              name='email'
-              placeholder='Your email address'
-              required
+              type='email',
+              name='email',
+              placeholder='Your email address',
+              required,
               aria-describedby='email-error'
             )
-            +btn('SUBSCRIBE', null, 'primary')(type='submit', class='newsletter__btn')
+            +btn('SUBSCRIBE', null, 'primary').newsletter__btn(type='submit')
             p#email-error.newsletter__error Please enter a valid email address.
           .newsletter__consent
             input#consent-check.newsletter__checkbox(type='checkbox', name='consent', required)
@@ -31,11 +31,11 @@ footer#contact.footer
       .footer__links
         each col in footerColumns
           .footer__col
-            h2.footer__heading #{col.heading}
+            h2.footer__heading #{ col.heading }
             ul.footer__list
               each link in col.links
                 li
-                  a.footer__link(href=link.href) #{link.label}
+                  a.footer__link(href=link.href) #{ link.label }
 
     .footer__divider
 
@@ -43,8 +43,4 @@ footer#contact.footer
       p.footer__copyright © 2026 Keepsake. All rights reserved.
       .socials
         each social in socials
-          a.socials__item(
-            class=`socials__item--${social.id}`
-            href=social.href
-            aria-label=social.label
-          ) #{social.short}
+          a.socials__item(class=`socials__item--${social.id}`, href=social.href, aria-label=social.label) #{ social.short }

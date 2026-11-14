@@ -7,11 +7,11 @@ mixin work-card(work, isFirst = false)
       282,
       '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw',
       'work-card__img',
-      isFirst
+      isFirst,
     )
     .work-card__overlay
       span.work-card__plus(aria-hidden='true')
         +icon('plus')
-      h3.work-card__title #{work.title}
+      h3.work-card__title #{ work.title }
       .work-card__divider
-      span.work-card__cat #{work.categoryLabel}
+      span.work-card__cat #{ work.categoryLabel }

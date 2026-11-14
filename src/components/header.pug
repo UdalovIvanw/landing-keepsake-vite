@@ -16,13 +16,13 @@ header.header
         each item in navItems
           li.nav__item
             a.nav__link(
-              class={ 'nav__link--active': item.active }
-              href=item.href
+              class={ 'nav__link--active': item.active },
+              href=item.href,
               aria-current=item.active ? 'page' : false
-            ) #{item.label}
+            ) #{ item.label }
 
       .nav__actions
-        +btn('Contact us', '#contact', 'primary')(class='nav__mobile-btn')
+        +btn('Contact us', '#contact', 'primary').nav__mobile-btn
         button.nav__fav-btn(type='button', aria-label='Favourites')
           +icon('heart')
           span.nav__fav-text Favourites
@@ -33,8 +33,4 @@ header.header
         p.nav__info-text +44 20 7946 0920
         .socials.nav__socials
           each social in socials
-            a.socials__item(
-              class=`socials__item--${social.id}`
-              href=social.href
-              aria-label=social.label
-            ) #{social.short}
+            a.socials__item(class=`socials__item--${social.id}`, href=social.href, aria-label=social.label) #{ social.short }

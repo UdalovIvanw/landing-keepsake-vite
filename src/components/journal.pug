@@ -5,7 +5,7 @@ section#journal.journal.section
     +section-header(
       'From the journal',
       'Notes on process, case studies and things that inspire us.',
-      'journal__title-box'
+      'journal__title-box',
     )
     .journal__grid
       each post in journalPosts
@@ -17,12 +17,12 @@ section#journal.journal.section
               150,
               150,
               '(min-width: 768px) 150px, 96px',
-              'journal-card__img'
+              'journal-card__img',
             )
           .journal-card__content
-            p.journal-card__meta #{post.date} / #{post.category}
-            h3.journal-card__title #{post.title}
-            p.journal-card__excerpt #{post.excerpt}
+            p.journal-card__meta #{ post.date } / #{ post.category }
+            h3.journal-card__title #{ post.title }
+            p.journal-card__excerpt #{ post.excerpt }
             a.journal-card__link(href=post.href)
               | Read more
               +icon('arrow-up')

@@ -1,14 +1,14 @@
 extends ../layouts/main
 
-append meta
+block append meta
   meta(
-    name='description'
+    name='description',
     content='Keepsake — digital & branding agency based in London. Web design, motion video, print and brand identity.'
   )
   meta(property='og:title', content='Keepsake | Digital & Branding Agency')
   meta(property='og:type', content='website')
 
-prepend styles
+block prepend styles
   meta(name='theme-color', content='#2d3136')
 
 block content
