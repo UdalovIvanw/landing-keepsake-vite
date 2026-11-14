@@ -1,0 +1,50 @@
+include ../data/navigation
+include ../data/footer
+
+footer#contact.footer
+  .container
+    .footer-top
+      .newsletter-block
+        h2.footer-heading NEWSLETTER
+        p.newsletter-desc Fresh case studies and design notes, once a month.
+        form.newsletter-form(action='#newsletter-success', method='get')
+          .input-group
+            input#newsletter-email.input-field(
+              type='email'
+              name='email'
+              placeholder='Your email address'
+              required
+              aria-describedby='email-error'
+            )
+            +btn('SUBSCRIBE', null, 'primary')(type='submit', class='btn-subscribe')
+            p#email-error.field-error Please enter a valid email address.
+          .consent-row
+            input#consent-check.consent-checkbox(type='checkbox', name='consent', required)
+            label.consent-text(for='consent-check') I agree to the privacy policy
+
+        #newsletter-success.newsletter-success(role='status')
+          .success-box
+            +icon('check')
+            span You're in! Check your inbox to confirm.
+          p.success-subtext One email a month. No spam, unsubscribe anytime.
+
+      .footer-links.link-columns
+        each col in footerColumns
+          .footer-col
+            h2.footer-heading #{col.heading}
+            ul.footer-list
+              each link in col.links
+                li
+                  a(href=link.href) #{link.label}
+
+    .footer-divider
+
+    .footer-bottom
+      p.copyright © 2026 Keepsake. All rights reserved.
+      .socials
+        each social in socials
+          a.social-icon(
+            class=`social-${social.id}`
+            href=social.href
+            aria-label=social.label
+          ) #{social.short}

@@ -1,0 +1,40 @@
+include ../data/navigation
+
+header.header
+  .container.header-container
+    a.logo(href='#top', aria-label='Keepsake - home')
+      span.logo-mark(aria-hidden='true') K
+      span.logo-text(aria-hidden='true') eepsake
+
+    input#menu-toggle.menu-toggle(type='checkbox', aria-label='Toggle navigation menu')
+    label.burger-btn(for='menu-toggle')
+      +icon('burger')
+      +icon('close')
+
+    nav#main-nav.nav(aria-label='Main navigation')
+      ul.nav-list
+        each item in navItems
+          li.nav-item
+            a.nav-link(
+              class={ active: item.active }
+              href=item.href
+              aria-current=item.active ? 'page' : false
+            ) #{item.label}
+
+      .nav-actions
+        +btn('Contact us', '#contact', 'primary')(class='nav-mobile-btn')
+        button.btn-favourites(type='button', aria-label='Favourites')
+          +icon('heart')
+          span.btn-fav-text Favourites
+
+      .mobile-nav-info
+        p.mobile-nav-info-label Get in touch
+        p.mobile-nav-info-text hello@keepsake.agency
+        p.mobile-nav-info-text +44 20 7946 0920
+        .socials.nav-socials
+          each social in socials
+            a.social-icon(
+              class=`social-${social.id}`
+              href=social.href
+              aria-label=social.label
+            ) #{social.short}

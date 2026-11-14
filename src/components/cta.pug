@@ -1,0 +1,7 @@
+section.cta.section
+  .container.cta-container
+    h2.cta-title Would you love to work with us?
+    //- Передача вкладеного вмісту через block у міксин +btn
+    +btn(null, '#contact', 'primary')(class='btn-cta')
+      +icon('mail')
+      | Contact us

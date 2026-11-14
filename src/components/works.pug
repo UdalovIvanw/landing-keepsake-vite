@@ -1,0 +1,25 @@
+include ../../data/works
+
+section#works.works.section
+  .container
+    //- Радіокнопки для CSS-фільтра (:checked ~) залишаються перед .works-head та .works-grid
+    each cat, i in workCategories
+      input.filter-radio(
+        id=`filter-${cat.id}`
+        type='radio'
+        name='portfolio-filter'
+        checked=i === 0
+      )
+
+    .works-head
+      +section-header('Our awesome works')
+      .filter-chips
+        each cat in workCategories
+          label.chip(for=`filter-${cat.id}`) #{cat.label}
+
+    .works-grid
+      each work, i in works
+        +work-card(work, i === 0)
+
+    .load-more
+      +btn('Load more works', null, 'secondary')(class='btn-load-more')

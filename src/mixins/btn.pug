@@ -1,0 +1,24 @@
+mixin btn(text, href, variant = 'primary')
+  - var variantClass = ''
+  case variant
+    when 'primary'
+      - variantClass = 'btn-primary'
+    when 'secondary'
+      - variantClass = 'btn-secondary'
+    when 'hero'
+      - variantClass = 'btn-hero'
+    default
+      - variantClass = 'btn-primary'
+
+  if href
+    a.btn(class=variantClass, href=href)&attributes(attributes)
+      if block
+        block
+      else
+        | #{text}
+  else
+    button.btn(class=variantClass, type='button')&attributes(attributes)
+      if block
+        block
+      else
+        | #{text}

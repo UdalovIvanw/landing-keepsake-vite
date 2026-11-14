@@ -1,0 +1,17 @@
+mixin work-card(work, isFirst = false)
+  article.work-card(data-category=work.category, tabindex='0')
+    +picture(
+      work.image,
+      work.alt,
+      357,
+      282,
+      '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw',
+      'card-img',
+      isFirst
+    )
+    .hover-overlay
+      span.plus-icon(aria-hidden='true')
+        +icon('plus')
+      h3.card-title #{work.title}
+      .card-divider
+      span.card-cat #{work.categoryLabel}
