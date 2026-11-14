@@ -1,4 +1,8 @@
 mixin picture(name, alt, width, height, sizes, className = '', isFirst = false)
+  - var loadingMode = false
+  unless isFirst
+    - loadingMode = 'lazy'
+
   picture
     source(
       type='image/avif'
@@ -16,7 +20,7 @@ mixin picture(name, alt, width, height, sizes, className = '', isFirst = false)
       alt=alt
       width=width
       height=height
-      loading=isFirst ? false : 'lazy'
+      loading=loadingMode
       decoding='async'
       fetchpriority=isFirst ? 'high' : false
     )

@@ -144,6 +144,16 @@
     }
   }
 
+  &:has(.newsletter__input:user-invalid) {
+    .newsletter__input {
+      border-color: var(--color-accent);
+    }
+
+    .newsletter__error {
+      display: block;
+    }
+  }
+
   &__desc {
     line-height: rem(20);
     color: var(--color-footer-muted);
@@ -153,16 +163,6 @@
     display: flex;
     flex-direction: column;
     gap: rem(14);
-
-    &:has(.newsletter__input:user-invalid) {
-      .newsletter__input {
-        border-color: var(--color-accent);
-      }
-
-      .newsletter__error {
-        display: block;
-      }
-    }
   }
 
   &__group {

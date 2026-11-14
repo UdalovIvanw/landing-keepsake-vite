@@ -6,19 +6,19 @@ section.clients.section
       'Clients & kind words',
       'Some of the teams that trusted us with their brands.'
     )
-    ul.client-logos
+    ul.clients__logos
       each client in clients
-        li.client-logo(class=`logo-${client.slug}`) #{client.name}
+        li.clients__logo(class=`clients__logo--${client.slug}`) #{client.name}
 
     blockquote.testimonial
-      span.quote-mark(aria-hidden='true') “
-      p.testimonial-text #{testimonial.text}
-      footer.testimonial-author
-        .author-info
-          .author-avatar(aria-hidden='true') #{testimonial.initials}
-          .author-details
-            p.author-name #{testimonial.author}
-            p.author-role #{testimonial.role}
-        .slider-dots(aria-hidden='true')
+      span.testimonial__quote(aria-hidden='true') “
+      p.testimonial__text #{testimonial.text}
+      footer.testimonial__author
+        .testimonial__info
+          .testimonial__avatar(aria-hidden='true') #{testimonial.initials}
+          .testimonial__details
+            p.testimonial__name #{testimonial.author}
+            p.testimonial__role #{testimonial.role}
+        .testimonial__dots(aria-hidden='true')
           each _, i in [0, 1, 2]
-            span.dot(class={ active: i === 0 })
+            span.testimonial__dot(class={ 'testimonial__dot--active': i === 0 })

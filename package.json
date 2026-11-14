@@ -9,12 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "^1.108.2",
     "vite": "8.3.3",
     "vituum": "^1.2.0"
-    
   },
   "dependencies": {
-    "@vituum/vite-plugin-pug": "^1.1.0",
-    "sass": "^1"
+    "@vituum/vite-plugin-pug": "^1.1.0"
   }
 }

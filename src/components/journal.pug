@@ -5,23 +5,24 @@ section#journal.journal.section
     +section-header(
       'From the journal',
       'Notes on process, case studies and things that inspire us.',
-      'journal-title-box'
+      'journal__title-box'
     )
-    .journal-grid
+    .journal__grid
       each post in journalPosts
         article.journal-card
-          .journal-thumb
+          .journal-card__thumb
             +picture(
               post.image,
               post.alt,
               150,
               150,
-              '(min-width: 768px) 150px, 96px'
+              '(min-width: 768px) 150px, 96px',
+              'journal-card__img'
             )
-          .journal-content
-            p.journal-meta #{post.date} / #{post.category}
-            h3.journal-title #{post.title}
-            p.journal-excerpt #{post.excerpt}
-            a.read-more(href=post.href)
+          .journal-card__content
+            p.journal-card__meta #{post.date} / #{post.category}
+            h3.journal-card__title #{post.title}
+            p.journal-card__excerpt #{post.excerpt}
+            a.journal-card__link(href=post.href)
               | Read more
               +icon('arrow-up')
