@@ -137,23 +137,6 @@
     width: rem(420);
   }
 
-  &:has(.newsletter__success:target) {
-    .newsletter__desc,
-    .newsletter__form {
-      display: none;
-    }
-  }
-
-  &:has(.newsletter__input:user-invalid) {
-    .newsletter__input {
-      border-color: var(--color-accent);
-    }
-
-    .newsletter__error {
-      display: block;
-    }
-  }
-
   &__desc {
     line-height: rem(20);
     color: var(--color-footer-muted);
@@ -271,6 +254,23 @@
     font-size: rem(12);
     line-height: rem(18);
     color: var(--color-footer-subtle);
+  }
+
+  &:has(.newsletter__success:target) {
+    .newsletter__desc,
+    .newsletter__form {
+      display: none;
+    }
+  }
+
+  &:has(.newsletter__input:user-invalid) {
+    .newsletter__input {
+      border-color: var(--color-accent);
+    }
+
+    .newsletter__error {
+      display: block;
+    }
   }
 }
 

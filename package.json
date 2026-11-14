@@ -28,7 +28,7 @@
     "@vituum/vite-plugin-pug": "^1.1.0",
     "autoprefixer": "^10.6.2",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.4.2",
     "sass": "^1.108.2",
     "sharp": "^0.33.5",

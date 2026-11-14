@@ -34,18 +34,18 @@ export default defineConfig(({ command, isPreview }) => {
 
             if (file.fileName.endsWith('.html') && typeof file.source === 'string') {
               file.source = file.source.replace(
-                  /\/src\/assets\/images\/([a-zA-Z0-9._-]+)/g,
-                  (match, imgName) => {
-                    const fullPath = path.resolve('src/assets/images', imgName);
-                    if (!fs.existsSync(fullPath)) return match;
+                /\/src\/assets\/images\/([a-zA-Z0-9._-]+)/g,
+                (match, imgName) => {
+                  const fullPath = path.resolve('src/assets/images', imgName);
+                  if (!fs.existsSync(fullPath)) return match;
 
-                    const refId = this.emitFile({
-                      type: 'asset',
-                      name: imgName,
-                      source: fs.readFileSync(fullPath),
-                    });
-                    return `${base}${this.getFileName(refId)}`;
-                  },
+                  const refId = this.emitFile({
+                    type: 'asset',
+                    name: imgName,
+                    source: fs.readFileSync(fullPath),
+                  });
+                  return `${base}${this.getFileName(refId)}`;
+                },
               );
             }
           }

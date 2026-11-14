@@ -71,28 +71,6 @@
   }
 }
 
-.menu-toggle {
-  @include visually-hidden;
-
-  &:checked + .burger-btn {
-    .icon--burger {
-      display: none;
-    }
-
-    .icon--close {
-      display: block;
-    }
-  }
-
-  &:checked ~ .nav {
-    display: block;
-
-    @include mq('md') {
-      display: flex;
-    }
-  }
-}
-
 .nav {
   display: none;
   position: absolute;
@@ -245,5 +223,27 @@
 
   &__socials {
     display: none;
+  }
+}
+
+.menu-toggle {
+  @include visually-hidden;
+
+  &:checked + .burger-btn {
+    .icon--burger {
+      display: none;
+    }
+
+    .icon--close {
+      display: block;
+    }
+  }
+
+  &:checked ~ .nav {
+    display: block;
+
+    @include mq('md') {
+      display: flex;
+    }
   }
 }

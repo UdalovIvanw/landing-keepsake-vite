@@ -16,12 +16,6 @@
     height: rem(282);
   }
 
-  &:hover .work-card__overlay,
-  &:focus-visible .work-card__overlay,
-  &:focus-within .work-card__overlay {
-    opacity: 1;
-  }
-
   &__img {
     width: 100%;
     height: 100%;
@@ -67,5 +61,11 @@
     font-size: rem(13);
     line-height: rem(18);
     color: var(--color-teal);
+  }
+
+  &:hover .work-card__overlay,
+  &:focus-visible .work-card__overlay,
+  &:focus-within .work-card__overlay {
+    opacity: 1;
   }
 }
