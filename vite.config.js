@@ -14,7 +14,9 @@ export default defineConfig(({ command, isPreview }) => {
     },
     plugins: [
       vituum({
-        imports: false,
+        imports: {
+          paths: [],
+        },
         pages: {
           dir: './src/pages',
           root: './src',
